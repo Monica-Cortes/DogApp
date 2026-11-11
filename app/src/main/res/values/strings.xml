@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">DogApp</string>
+
+    <!-- Títulos -->
+    <string name="titulo_home">Administrador de Citas</string>
+    <string name="titulo_nueva_cita">Nueva Cita</string>
+    <string name="titulo_editar_cita">Editar Cita</string>
+    <string name="guardar_cita">Guardar Cita</string>
+    <string name="volver">Volver</string>
+
+    <!-- Hints -->
+    <string name="hint_nombre_mascota">Nombre de la Mascota</string>
+    <string name="hint_raza">Raza</string>
+    <string name="hint_nombre_propietario">Nombre del Propietario</string>
+    <string name="hint_telefono">Teléfono</string>
+
+    <!-- Biometría -->
+    <string name="autenticacion_biometria">Autenticación con Biometría</string>
+    <string name="ingrese_huella">Ingrese su huella digital</string>
+    <string name="cancelar">Cancelar</string>
+
+    <!-- Mensajes -->
+    <string name="selecciona_sintoma">Selecciona un síntoma</string>
+
+    <string-array name="sintomas">
+        <item>Síntomas</item>
+        <item>Solo duerme</item>
+        <item>No come</item>
+        <item>Fractura extremidad</item>
+        <item>Tiene pulgas</item>
+        <item>Tiene garrapatas</item>
+        <item>Bota demasiado pelo</item>
+    </string-array>
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.dogapp.view.fragment.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.dogapp.view.fragment.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_addCitaFragment"
+            app:destination="@id/addCitaFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_detailCitaFragment"
+            app:destination="@id/detailCitaFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addCitaFragment"
+        android:name="com.example.dogapp.view.fragment.AddCitaFragment"
+        android:label="AddCitaFragment"
+        tools:layout="@layout/fragment_add_cita">
+        <action
+            android:id="@+id/action_addCitaFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailCitaFragment"
+        android:name="com.example.dogapp.view.fragment.DetailCitaFragment"
+        android:label="DetailCitaFragment"
+        tools:layout="@layout/fragment_detail_cita">
+        <action
+            android:id="@+id/action_detailCitaFragment_to_editCitaFragment"
+            app:destination="@id/editCitaFragment" />
+        <action
+            android:id="@+id/action_detailCitaFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/editCitaFragment"
+        android:name="com.example.dogapp.view.fragment.EditCitaFragment"
+        android:label="EditCitaFragment"
+        tools:layout="@layout/fragment_edit_cita">
+        <action
+            android:id="@+id/action_editCitaFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
