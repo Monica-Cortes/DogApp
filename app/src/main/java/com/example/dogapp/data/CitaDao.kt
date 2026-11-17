@@ -14,7 +14,7 @@ interface CitaDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun saveCita(cita: Cita)
 
-    @Query("SELECT * FROM Cita")
+    @Query("SELECT * FROM Cita ORDER BY id ASC")
     suspend fun getListCitas(): MutableList<Cita>
 
     @Delete
