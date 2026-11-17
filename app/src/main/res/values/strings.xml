@@ -8,6 +8,10 @@
     <string name="titulo_editar_cita">Editar Cita</string>
     <string name="guardar_cita">Guardar Cita</string>
     <string name="volver">Volver</string>
+    <string name="sin_citas">No hay citas registradas</string>
+    <string name="imagen_mascota">Imagen de la mascota</string>
+    <string name="agregar_cita">Agregar cita</string>
+    <string name="logo_dogapp">Logo DogApp</string>
 
     <!-- Hints -->
     <string name="hint_nombre_mascota">Nombre de la Mascota</string>

@@ -24,4 +24,10 @@ class CitaAdapter(
     }
 
     override fun getItemCount(): Int = listCitas.size
+
+    fun setCitas(citas: List<Cita>) {
+        listCitas.clear()
+        listCitas.addAll(citas)
+        notifyDataSetChanged()
+    }
 }
