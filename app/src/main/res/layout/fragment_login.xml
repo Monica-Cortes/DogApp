@@ -9,17 +9,53 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/grisOscuro">
+        android:background="@color/grisLogin">
+
+        <ImageView
+            android:id="@+id/ivPerro"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@null"
+            android:scaleType="fitEnd"
+            android:src="@drawable/img_perro_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.6" />
 
         <TextView
+            android:id="@+id/tvTitulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Login"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/lilita_one"
+            android:text="@string/titulo_login"
             android:textColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="48sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/ivPerro" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glHuella"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.78" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lavHuella"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/glHuella"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.5"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/huella" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

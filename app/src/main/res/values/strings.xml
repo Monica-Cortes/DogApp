@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">DogApp</string>
+    <string name="app_name">dogApp</string>
+    <string name="titulo_login">DogApp</string>
 
     <!-- Títulos -->
     <string name="titulo_home">Administrador de Citas</string>
@@ -20,6 +21,7 @@
     <string name="cancelar">Cancelar</string>
 
     <!-- Mensajes -->
+    <string name="sin_biometria">La biometría no está disponible o no hay una huella registrada en este dispositivo</string>
     <string name="selecciona_sintoma">Selecciona un síntoma</string>
 
     <string-array name="sintomas">
