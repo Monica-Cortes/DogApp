@@ -11,7 +11,6 @@
         android:layout_height="match_parent"
         android:background="@color/white">
 
-        <!-- Criterio 1: toolbar personalizada -->
         <include
             android:id="@+id/toolbar"
             layout="@layout/toolbar_custom"
@@ -22,7 +21,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- Criterio 3: tarjeta blanca con la información (queda por debajo de la imagen) -->
         <androidx.cardview.widget.CardView
             android:id="@+id/cvInfo"
             android:layout_width="0dp"
@@ -80,7 +78,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tvRaza" />
 
-                <!-- Línea delgada rosada -->
                 <View
                     android:id="@+id/vLinea"
                     android:layout_width="0dp"
@@ -140,7 +137,6 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Criterio 2: tarjeta con la imagen (declarada después y con más elevación, queda por encima) -->
         <androidx.cardview.widget.CardView
             android:id="@+id/cvImagen"
             android:layout_width="0dp"
@@ -171,7 +167,6 @@
             </androidx.cardview.widget.CardView>
         </androidx.cardview.widget.CardView>
 
-        <!-- Criterio 4: FAB eliminar (abajo a la izquierda) -->
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fabEliminar"
             android:layout_width="wrap_content"
@@ -184,7 +179,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:tint="@color/white" />
 
-        <!-- Criterio 5: FAB editar (abajo a la derecha) -->
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fabEditar"
             android:layout_width="wrap_content"

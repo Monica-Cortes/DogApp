@@ -13,6 +13,7 @@ import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.example.dogapp.R
 import com.example.dogapp.model.Cita
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 // TODO HU 4.0: mostrar la cita recibida por Bundle ("clave"), FAB eliminar (deleteCita) y FAB editar hacia EditCita.
 class DetailCitaFragment : Fragment() {
@@ -41,8 +42,8 @@ class DetailCitaFragment : Fragment() {
     private fun controladores() {
         regresarHome()
         cargarDatos()
-        //eliminarCita()
-        //editarCita()
+        eliminarCita()
+        editarCita()
     }
 
     private fun regresarHome() {
@@ -62,5 +63,37 @@ class DetailCitaFragment : Fragment() {
         Glide.with(this)
             .load(cita.imagenUrl)
             .into(binding.ivMascota)
+    }
+
+    private fun eliminarCita() {
+        binding.fabEliminar.setOnClickListener {
+            MaterialAlertDialogBuilder(requireContext())
+                .setTitle(getString(R.string.eliminar_cita))
+                .setMessage(getString(R.string.confirm))
+                .setPositiveButton(getString(R.string.eliminar)) { _, _ ->
+                    confirmarEliminacion()
+                }
+                .setNegativeButton(getString(R.string.cancelar)) { dialog, _ ->
+                    dialog.dismiss()
+                }
+                .show()
+        }
+    }
+
+    // Solo se ejecuta si el usuario confirma: borra de Room y vuelve al Home
+    private fun confirmarEliminacion() {
+        val cita = cita ?: return
+        citaViewModel.deleteCita(cita) { mensaje ->
+            Toast.makeText(requireContext(), mensaje, Toast.LENGTH_SHORT).show()
+            findNavController().navigate(R.id.action_detailCitaFragment_to_homeFragment)
+        }
+    }
+    private fun editarCita(){
+        binding.fabEditar.setOnClickListener {
+            val cita = cita ?: return@setOnClickListener
+            val bundle = Bundle()
+            bundle.putSerializable("clave", cita)
+            findNavController().navigate(R.id.action_detailCitaFragment_to_editCitaFragment, bundle)
+        }
     }
 }
