@@ -37,4 +37,13 @@
         <item>Tiene garrapatas</item>
         <item>Bota demasiado pelo</item>
     </string-array>
+
+    <!-- Detalles Cita -->
+    <string name="propietario">Propietario</string>
+    <string name="telefono">Teléfono</string>
+    <string name="eliminar_cita">Eliminar cita</string>
+    <string name="editar_cita">Editar cita</string>
+    <string name="confirm">¿Seguro que desea eliminar esta cita?</string>
+    <string name="eliminar">Eliminar</string>
+
 </resources>
