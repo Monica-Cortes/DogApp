@@ -80,7 +80,6 @@ class DetailCitaFragment : Fragment() {
         }
     }
 
-    // Solo se ejecuta si el usuario confirma: borra de Room y vuelve al Home
     private fun confirmarEliminacion() {
         val cita = cita ?: return
         citaViewModel.deleteCita(cita) { mensaje ->
