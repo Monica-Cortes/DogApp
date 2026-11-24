@@ -154,6 +154,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:backgroundTint="@null"
+            app:icon="@drawable/ic_guardar"
             app:iconGravity="textStart"
             app:iconPadding="8dp"
             app:iconTint="@color/white" />
